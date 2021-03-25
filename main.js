@@ -36,8 +36,11 @@ var app = new Vue(
         // console.log(this.esempio);
         // console.log(this.lists);
       },
-      done: function () {
-        
+      done: function (pollice) {
+        console.log(this.lists[pollice]);
+      },
+      edit: function () {
+
       }
     },
     // created: function () {

@@ -18,13 +18,13 @@
           <!-- <li v-for="cosa in lists">
           <span> {{ cosa }} </span>
           </li> -->
-          <li v-for="cosa in lists">
+          <li v-for="(cosa, i) in lists">
             <div class="">
               <span> {{ cosa.listItem }} </span>
             </div>
             <div class="">
               <span @click="edit"><i class="fas fa-edit"></i></span>
-              <span @click="done"><i class="fas fa-check"></i></span>
+              <span @click="done(i)"><i class="fas fa-check"></i></span>
             </div>
           </li>
         </ul>
