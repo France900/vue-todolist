@@ -6,15 +6,44 @@ var app = new Vue(
   {
     el: "#root",
     data: {
+      esempio: "",
+      // cosi funziona con gli array
+      // lists: [
+      //   "prova",
+      //   "esperimento",
+      //   "tentativo",
+      // ],
       lists: [
         {
           listItem: "prova",
         },
+        {
+          listItem: "esperimento",
+        },
+        {
+          listItem: "tentativo",
+        },
       ]
     },
     methods: {
+      add: function () {
+        let objey = {
+          listItem: this.esempio,
+        }
+        this.lists.push(objey);
+        this.esempio = ""
+        // this.lists.push(this.esempio);
+        // console.log(this.esempio);
+        // console.log(this.lists);
+      },
+      done: function () {
+        
+      }
     },
-    created: function () {
-    }
+    // created: function () {
+    // },
+    // mounted: {
+    //
+    // }
   }
 );

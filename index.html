@@ -11,13 +11,26 @@
 
   <body>
     <div id="root">
-      <h3>My ToDo List</h3>
-      <ul>
-        <li v-for="cosa in lists">
-          <span> sfsdfsdf {{ lists.listItem }} dfgdfgdf </span>
-        </li>
-      </ul>
-      <input type="text" name="" value="">
+      <div class="container">
+        <h3>My ToDo List</h3>
+        <ul>
+          <!-- cosi funziona con gli array -->
+          <!-- <li v-for="cosa in lists">
+          <span> {{ cosa }} </span>
+          </li> -->
+          <li v-for="cosa in lists">
+            <div class="">
+              <span> {{ cosa.listItem }} </span>
+            </div>
+            <div class="">
+              <span @click="edit"><i class="fas fa-edit"></i></span>
+              <span @click="done"><i class="fas fa-check"></i></span>
+            </div>
+          </li>
+        </ul>
+        <!-- <p>{{esempio}}</p> -->
+        <input type="text" v-model="esempio" @keyup.enter="add">
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="main.js"></script>
